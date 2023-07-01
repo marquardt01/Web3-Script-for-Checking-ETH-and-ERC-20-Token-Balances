@@ -1,0 +1,13 @@
+In this script, we use the web3 library to connect to the Ethereum network via Infura. We define a wallet address (walletAddress) for which we want to check the ETH balance and a list of ERC-20 token addresses (tokenAddresses) for which we want to check the balances.
+
+We have two asynchronous functions:
+
+getEthBalance(address): This function takes a wallet address as a parameter and uses web3.eth.getBalance to retrieve the ETH balance for that address.
+
+getTokenBalance(address, tokenAddress): This function takes a wallet address and an ERC-20 token address as parameters. It creates an instance of the ERC-20 contract using web3.eth.Contract and calls the balanceOf method to retrieve the token balance.
+
+In the usage example, we call getEthBalance to retrieve the ETH balance and log it to the console. Then, we iterate over the tokenAddresses list and for each address, we call getTokenBalance to retrieve the ERC-20 token balance and log it to the console.
+
+Please make sure you have the necessary dependencies installed, including the web3 and erc-20-abi libraries. You can install them by running npm install web3 erc-20-abi.
+
+Note that this script provides only an example usage and may require further customization depending on your needs and environment.
